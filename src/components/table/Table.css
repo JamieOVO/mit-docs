@@ -1,0 +1,49 @@
+.features,
+.home-content {
+  background: url("/src/img/background.svg") top/100% no-repeat fixed;
+  width: calc(100% - 350px);
+  position: relative;
+  contain: layout;
+}
+.feature-container,
+.home-body {
+  max-width: 80%;
+  background-color: white;
+  margin: auto;
+  padding: 2em;
+  box-shadow: 0px 0px 6px 0px #00000040;
+  margin-bottom: 2em;
+}
+
+.feature-container-anchors {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+.scenario-table,
+th,
+td {
+  border-collapse: collapse;
+}
+.scenario-table {
+  width: auto;
+  table-layout: fixed;
+  margin-left: 1em;
+}
+.scenario-name {
+  white-space: nowrap;
+  color: #0d8426;
+  margin-bottom: 0.5em;
+}
+.step-type {
+  font-weight: bold;
+}
+td {
+  padding: 4px;
+  vertical-align: top;
+}
+.keyword {
+  font-weight: bold;
+}

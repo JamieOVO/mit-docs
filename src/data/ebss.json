@@ -1,0 +1,3020 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "account-details-validation;submitting-empty-fields-returns-correct-validation-message",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Submitting empty fields returns correct validation message",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have left all input fields empty",
+            "result": {
+              "duration": 1184000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 5,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 150000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I can see the account number validation message: \"Your account number is required\"",
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 7,
+            "name": "I can see the email address validation message: \"Your email is required\"",
+            "result": {
+              "duration": 62000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 8,
+            "name": "I can see the postcode validation message: \"Your postcode is required\"",
+            "result": {
+              "duration": 106000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "account-details-validation;submitting-invalid-input-returns-correct-validation-message",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Submitting invalid input returns correct validation message",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I have entered \"abc\" into the account number field",
+            "result": {
+              "duration": 687000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 12,
+            "name": "I have entered \"test.test\" into the email address field",
+            "result": {
+              "duration": 479000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 13,
+            "name": "I have entered \"123abc\" into the postcode field",
+            "result": {
+              "duration": 398000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 14,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 111000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I can see the account number validation message: \"Your account number should only contain numbers\"",
+            "result": {
+              "duration": 25000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 16,
+            "name": "I can see the email address validation message: \"Please enter a valid email\"",
+            "result": {
+              "duration": 38000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 17,
+            "name": "I can see the postcode validation message: \"Please enter a valid postcode\"",
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "account-details-validation;submitting-unrecognised-account-details-returns-correct-validation-message",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Submitting unrecognised account details returns correct validation message",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I have entered unrecognised account details into the input fields",
+            "result": {
+              "duration": 1432000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 21,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 275000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I can see the validation message: \"Sorry, we don't recognise your details. Please check them and try again if they are incorrect.\"",
+            "result": {
+              "duration": 174000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "account-details-validation",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Account details validation",
+    "uri": "cypress/e2e/features/accountDetailsValidation.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "csat-survey-card;the-csat-survey-card-loads-after-submitting-account-details-for-the-first-time",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "The CSAT survey card loads after submitting account details for the first time",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I enter my account details",
+            "result": {
+              "duration": 2066000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 5,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 296000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I can see the CSAT survey card",
+            "result": {
+              "duration": 1790000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "csat-survey-card;the-csat-survey-card-loads-after-submitting-account-details-for-the-second-time",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "The CSAT survey card loads after submitting account details for the second time",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I have already used the Winter Support tool and returned to the account details screen",
+            "result": {
+              "duration": 2075000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 10,
+            "name": "I enter my account details",
+            "result": {
+              "duration": 1280000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 11,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 131000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I can see the CSAT survey card",
+            "result": {
+              "duration": 658000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "csat-survey-card",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "CSAT survey card",
+    "uri": "cypress/e2e/features/csatCard.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;clicking-'what-is-this-scheme-about?'-reveals-ebss-general-info",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Clicking 'What is this scheme about?' reveals EBSS general info",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I enter my account details",
+            "result": {
+              "duration": 2167000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 5,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 335000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click the EBSS What is this accordion button",
+            "result": {
+              "duration": 538000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the EBSS general info",
+            "result": {
+              "duration": 44000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;i-can-click-the-'visit-website'-button-to-find-out-more-about-ebss",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "I can click the 'Visit website' button to find out more about EBSS",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I enter my account details",
+            "result": {
+              "duration": 1547000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 119000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the Visit website button links to the EBSS info page",
+            "result": {
+              "duration": 217000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;orion-dd---supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Orion DD - Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am an Orion PAYM DD customer with one past payment and one upcoming payment - redeemed",
+            "result": {
+              "duration": 1367000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 16,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 316000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 248000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 18,
+            "name": "I should see \"1-5 days after your Direct Debit payment is collected\" under Discount due",
+            "result": {
+              "duration": 51000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 19,
+            "name": "I should see \"Refund to your bank account\" under Discount paid as a",
+            "result": {
+              "duration": 43000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 20,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 78000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 21,
+            "name": "I should see \"We show this as a refund taken off your balance.\" for payment type \"bacs\" under Where you’ll see your discount",
+            "result": {
+              "duration": 99000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 22,
+            "name": "I should see \"If you cancel your Direct Debit\" for payment type \"bacs\" under Haven’t received your discount?",
+            "result": {
+              "duration": 48000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;orion-dd-account---supplied-|-refundrequested",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Orion DD account - Supplied | RefundRequested",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I am an Orion PAYM DD customer with one past payment and one upcoming payment - refund requested",
+            "result": {
+              "duration": 1314000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 26,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 116000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 202000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 28,
+            "name": "I should see \"1-5 days after your Direct Debit payment is collected\" under Discount due",
+            "result": {
+              "duration": 37000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 29,
+            "name": "I should see \"Refund to your bank account\" under Discount paid as a",
+            "result": {
+              "duration": 30000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 30,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 31,
+            "name": "I should see \"We show this as a refund taken off your balance.\" for payment type \"bacs\" under Where you’ll see your discount",
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 32,
+            "name": "I should see \"If you cancel your Direct Debit\" for payment type \"bacs\" under Haven’t received your discount?",
+            "result": {
+              "duration": 40000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;orion-payonbill-account---supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Orion PayOnBill account - Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am an Orion PAYM POB customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1431000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 36,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 127000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 91000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 38,
+            "name": "I should see \"First 5 working days of the month\" under Discount due",
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 39,
+            "name": "I should see \"Credit to your energy account\" under Discount paid as a",
+            "result": {
+              "duration": 30000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 40,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 41,
+            "name": "I should see \"these will show under energy charges on your statement.\" for payment type \"acc\" under Where you’ll see your discount",
+            "result": {
+              "duration": 50000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 42,
+            "name": "I should not see the Haven’t received your discount advice",
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-dd-account---supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "GenTrack DD account - Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 45,
+            "name": "I am a Gentrack PAYM DD customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1332000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 46,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 118000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 47,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 89000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 48,
+            "name": "I should see \"1-5 days after your Direct Debit payment is collected\" under Discount due",
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 49,
+            "name": "I should see \"Refund to your bank account\" under Discount paid as a",
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 50,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 51,
+            "name": "I should see \"We show this as a refund taken off your balance.\" for payment type \"bacs\" under Where you’ll see your discount",
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 52,
+            "name": "I should see \"If you cancel your Direct Debit\" for payment type \"bacs\" under Haven’t received your discount?",
+            "result": {
+              "duration": 35000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-payonbill-account---supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "GenTrack PayOnBill account - Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 55,
+            "name": "I am a Gentrack PAYM POB customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1275000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 56,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 96000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 82000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 58,
+            "name": "I should see \"First 5 working days of the month\" under Discount due",
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 59,
+            "name": "I should see \"Credit to your energy account\" under Discount paid as a",
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 60,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 61,
+            "name": "I should see \"these will show under energy charges on your statement.\" for payment type \"acc\" under Where you’ll see your discount",
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 62,
+            "name": "I should not see the Haven’t received your discount advice",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-bit-balance-paygsmart-account-supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 64,
+        "name": "GenTrack Bit Balance PAYGSmart account Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I am a GenTrack Bit Balance PAYGSmart customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1290000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 66,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 100000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 67,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 311000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 68,
+            "name": "I should see \"First 5 working days of the month\" under Discount due",
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 69,
+            "name": "I should see \"Credit to your electricity meter\" under Discount paid as a",
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 70,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 25000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 71,
+            "name": "I should not see the Where you’ll see your discount advice",
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 72,
+            "name": "I should see \"We’ll get in touch to confirm each time we’ve added the credit.\" for payment type \"smt\" under Haven’t received your discount?",
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;orion-bit-balance-paygsmart-account-supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 74,
+        "name": "Orion Bit Balance PAYGSmart account Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 75,
+            "name": "I am an Orion Bit Balance PAYGSmart customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1281000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 76,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 98000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 77,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 69000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 78,
+            "name": "I should see \"First 5 working days of the month\" under Discount due",
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 79,
+            "name": "I should see \"Credit to your electricity meter\" under Discount paid as a",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 80,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 81,
+            "name": "I should not see the Where you’ll see your discount advice",
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 82,
+            "name": "I should see \"We’ll get in touch to confirm each time we’ve added the credit.\" for payment type \"smt\" under Haven’t received your discount?",
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-secure-api-paygsmart-account-supplied-|-redeemed",
+        "keyword": "Scenario",
+        "line": 84,
+        "name": "GenTrack Secure API PAYGSmart account Supplied | Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 85,
+            "name": "I am a GenTrack Secure API PAYGSmart customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1310000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 86,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 122000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 87,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 83000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 88,
+            "name": "I should see \"First 5 working days of the month\" under Discount due",
+            "result": {
+              "duration": 40000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 89,
+            "name": "I should see \"Credit to your electricity meter\" under Discount paid as a",
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 90,
+            "name": "I should see 1 past payment in October",
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 91,
+            "name": "I should not see the Where you’ll see your discount advice",
+            "result": {
+              "duration": 39000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 92,
+            "name": "I should see \"We’ll get in touch to confirm each time we’ve added the credit.\" for payment type \"smt\" under Haven’t received your discount?",
+            "result": {
+              "duration": 41000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-secure-api-paygsmart-account---all-months-redeemed",
+        "keyword": "Scenario",
+        "line": 94,
+        "name": "GenTrack Secure API PAYGSmart account - All months Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 95,
+            "name": "I am a GenTrack Secure API PAYGSmart customer with all payments received",
+            "result": {
+              "duration": 1289000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 96,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 97,
+            "name": "I should not see the Upcoming discount, Discount Due, Discount paid as or Where you’ll see your discount sections",
+            "result": {
+              "duration": 38000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 98,
+            "name": "I should see 6 past payments between October and March",
+            "result": {
+              "duration": 266000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 99,
+            "name": "I should see \"We’ll get in touch to confirm each time we’ve added the credit.\" for payment type \"smt\" under Haven’t received your discount?",
+            "result": {
+              "duration": 51000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-secure-api-paygsmart-account---first-5-months-redeemed",
+        "keyword": "Scenario",
+        "line": 101,
+        "name": "GenTrack Secure API PAYGSmart account - First 5 months Redeemed",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 102,
+            "name": "I am a GenTrack Secure API PAYGSmart customer with 5 payments received",
+            "result": {
+              "duration": 1294000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 103,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 92000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 104,
+            "name": "I should see \"£67 in March\" under Upcoming discount",
+            "result": {
+              "duration": 74000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 105,
+            "name": "I should see the payment disclaimer: \"*You will receive this discount as long as you do not switch away from OVO or move home without informing us.\"",
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 106,
+            "name": "I should see \"First 5 working days of the month\" under Discount due",
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 107,
+            "name": "I should see \"Credit to your electricity meter\" under Discount paid as a",
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 108,
+            "name": "I should see 5 past payments between October and February",
+            "result": {
+              "duration": 62000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 109,
+            "name": "I should not see the Where you’ll see your discount advice",
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 110,
+            "name": "I should see \"We’ll get in touch to confirm each time we’ve added the credit.\" for payment type \"smt\" under Haven’t received your discount?",
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-energy-bills-support-scheme-details;gentrack-paygtrad-account-supplied-|-sent",
+        "keyword": "Scenario",
+        "line": 112,
+        "name": "GenTrack PAYGTrad account Supplied | Sent",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 113,
+            "name": "I am a GenTrack DPPM PAYGSmart customer with one past payment and one upcoming payment",
+            "result": {
+              "duration": 1275000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 114,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 99000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 115,
+            "name": "I should see \"£66 in November\" under Upcoming discount",
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 116,
+            "name": "I should see \"Within 11 working days of the 1st of each month\" under Discount due",
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 117,
+            "name": "I should see \"Voucher in the post\" under Discount paid as a",
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 118,
+            "name": "I should see 1 processed past payment in October",
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 119,
+            "name": "I should see advice on postal strikes",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 120,
+            "name": "I should see advice on redeeming my voucher",
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 121,
+            "name": "I should not see the Where you’ll see your discount advice",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 122,
+            "name": "I should not see the Haven’t received your discount advice",
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "card-for-energy-bills-support-scheme-details",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Card for Energy Bills Support Scheme details",
+    "uri": "cypress/e2e/features/ebssCard.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;clicking-'what-is-this-scheme-about?'-reveals-whd-general-info",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Clicking 'What is this scheme about?' reveals WHD general info",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I enter my account details",
+            "result": {
+              "duration": 2057000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 5,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 419000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click the WHD What is this accordion button",
+            "result": {
+              "duration": 669000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the WHD general info",
+            "result": {
+              "duration": 43000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;i-can-click-the-'learn-more'-button-to-find-out-more-about-whd",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "I can click the 'Learn More' button to find out more about WHD",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I enter my account details",
+            "result": {
+              "duration": 1483000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 11,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 285000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the Learn More button links to the WHD info page",
+            "result": {
+              "duration": 206000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;paid---meter-credit",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Paid - meter credit",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am a PAYG customer and have received my WHD electricity meter credit",
+            "result": {
+              "duration": 1306000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 16,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 81000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 18,
+            "name": "I should see Discount paid as a: \"Credit to your electricity meter\"",
+            "result": {
+              "duration": 54000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 19,
+            "name": "I should see Payment issue date: \"Paid on 01/09/2022\"",
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 20,
+            "name": "I should not see a Due by date or advice on moving home or postal strikes",
+            "result": {
+              "duration": 127000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;unpaid---meter-credit",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Unpaid - meter credit",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I am a PAYG customer and I’m awaiting my WHD electricity meter credit",
+            "result": {
+              "duration": 1291000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 24,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 123000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 26,
+            "name": "I should see Discount paid as a: \"Credit to your electricity meter\"",
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 27,
+            "name": "I should see Discount due by: \"within the next 2 weeks\"",
+            "result": {
+              "duration": 28000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 28,
+            "name": "I should see advice about payment communications and moving house",
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 29,
+            "name": "I should not see advice about postal strikes",
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;unpaid---overdue-meter-credit",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Unpaid - overdue meter credit",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I am a PAYG customer and I’m awaiting my overdue WHD electricity meter credit",
+            "result": {
+              "duration": 1345000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 33,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 109000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 34,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 148000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 35,
+            "name": "I should see Discount paid as a: \"Credit to your electricity meter\"",
+            "result": {
+              "duration": 54000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 36,
+            "name": "I should see Discount due by: \"within the next week\"",
+            "result": {
+              "duration": 51000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 37,
+            "name": "I should see advice about payment communications and moving house",
+            "result": {
+              "duration": 82000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 38,
+            "name": "I should not see advice about postal strikes",
+            "result": {
+              "duration": 44000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;paid---cheque",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Paid - cheque",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 41,
+            "name": "I am a customer and have received my WHD cheque",
+            "result": {
+              "duration": 1274000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 42,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 112000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 43,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 137000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 44,
+            "name": "I should see Discount paid as a: \"Cheque in the post\"",
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 45,
+            "name": "I should see Payment issue date: \"Paid on 01/10/2022\"",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 46,
+            "name": "I should see advice about postal strikes",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 47,
+            "name": "I should not see a Due by date or moving home advice",
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;unpaid---cheque",
+        "keyword": "Scenario",
+        "line": 49,
+        "name": "Unpaid - cheque",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 50,
+            "name": "I am a customer and I’m awaiting my WHD cheque",
+            "result": {
+              "duration": 1305000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 51,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 101000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 71000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 53,
+            "name": "I should see Discount paid as a: \"Cheque in the post\"",
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 54,
+            "name": "I should see Discount due by: \"within the next 4 weeks\"",
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 55,
+            "name": "I should see advice about postal strikes and moving house",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 56,
+            "name": "I should not see advice about payment communications",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;unpaid---overdue-cheque",
+        "keyword": "Scenario",
+        "line": 58,
+        "name": "Unpaid - overdue cheque",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 59,
+            "name": "I am a customer and I’m awaiting my overdue WHD cheque",
+            "result": {
+              "duration": 1283000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 60,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 95000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 61,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 72000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 62,
+            "name": "I should see Discount paid as a: \"Cheque in the post\"",
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 63,
+            "name": "I should see Discount due by: \"within the next week\"",
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 64,
+            "name": "I should see advice about postal strikes and moving house",
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 65,
+            "name": "I should not see advice about payment communications",
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;paid---account-credit",
+        "keyword": "Scenario",
+        "line": 67,
+        "name": "Paid - account credit",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 68,
+            "name": "I am a PAYM customer and have received my WHD account credit",
+            "result": {
+              "duration": 1292000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 69,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 102000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 142000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 71,
+            "name": "I should see Discount paid as a: \"Credit to your OVO account\"",
+            "result": {
+              "duration": 38000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 72,
+            "name": "I should see Payment issue date: \"Paid on 01/10/2022\"",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 73,
+            "name": "I should not see a Due by date or advice on moving home or postal strikes",
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;unpaid---account-credit",
+        "keyword": "Scenario",
+        "line": 75,
+        "name": "Unpaid - account credit",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 76,
+            "name": "I am a PAYM customer and I’m awaiting my WHD account credit",
+            "result": {
+              "duration": 1289000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 77,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 99000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 78,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 65000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 79,
+            "name": "I should see Discount paid as a: \"Credit to your OVO account\"",
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 80,
+            "name": "I should see Discount due by: \"within the next 4 weeks\"",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 81,
+            "name": "I should see advice about payment communications and moving house",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 82,
+            "name": "I should not see advice about postal strikes",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;unpaid---overdue-account-credit",
+        "keyword": "Scenario",
+        "line": 84,
+        "name": "Unpaid - overdue account credit",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 85,
+            "name": "I am a PAYM customer and I’m awaiting my overdue WHD account credit",
+            "result": {
+              "duration": 1318000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 86,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 101000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 87,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 108000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 88,
+            "name": "I should see Discount paid as a: \"Credit to your OVO account\"",
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 89,
+            "name": "I should see Discount due by: \"within the next week\"",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 90,
+            "name": "I should see advice about payment communications and moving house",
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 91,
+            "name": "I should not see advice about postal strikes",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;paid---paid-to-gas-meter",
+        "keyword": "Scenario",
+        "line": 93,
+        "name": "Paid - paid to gas meter",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 94,
+            "name": "I am a PAYG customer and have received my WHD gas meter credit",
+            "result": {
+              "duration": 1284000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 95,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 114000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 96,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 91000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 97,
+            "name": "I should see Discount paid as a: \"Credit to your gas meter\"",
+            "result": {
+              "duration": 44000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 98,
+            "name": "I should see Payment issue date: \"Paid on 01/09/2022\"",
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 99,
+            "name": "I should not see a Due by date or advice on moving home or postal strikes",
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;not-enrolled",
+        "keyword": "Scenario",
+        "line": 101,
+        "name": "Not enrolled",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 102,
+            "name": "I am not enrolled for the WHD",
+            "result": {
+              "duration": 1273000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 103,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 104,
+            "name": "I should not see the WHD anchor button",
+            "result": {
+              "duration": 18000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 105,
+            "name": "I should not see the WHD card",
+            "result": {
+              "duration": 25000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;enrolled---no-useful-data",
+        "keyword": "Scenario",
+        "line": 107,
+        "name": "Enrolled - no useful data",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 108,
+            "name": "I am enrolled for the WHD but have not been processed",
+            "result": {
+              "duration": 1269000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 109,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 133000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 110,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 74000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 111,
+            "name": "I should see Discount due by: \"within the next 6 weeks\"",
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 112,
+            "name": "I should see advice about moving house",
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 113,
+            "name": "I should not see a payment method",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;ineligible-for-whd",
+        "keyword": "Scenario",
+        "line": 115,
+        "name": "Ineligible for WHD",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 116,
+            "name": "I am ineligble for the WHD",
+            "result": {
+              "duration": 1300000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 117,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 111000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 118,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 119,
+            "name": "I should see advice about my ineligibility",
+            "result": {
+              "duration": 48000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 120,
+            "name": "I should see the Check my eligibility button",
+            "result": {
+              "duration": 37000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 121,
+            "name": "I should not see a payment method, Due by date or advice on moving house or postal strikes",
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;scotland---ineligible",
+        "keyword": "Scenario",
+        "line": 123,
+        "name": "Scotland - ineligible",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 124,
+            "name": "I live in Scotland and am ineligble for the WHD",
+            "result": {
+              "duration": 1332000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 125,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 112000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 126,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 107000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 127,
+            "name": "I should see advice about my ineligibility",
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 128,
+            "name": "I should see the Check my eligibility button",
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 129,
+            "name": "I should not see a payment method, Due by date or advice on moving house or postal strikes",
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "card-for-warm-home-discount-details;scotland---eligible",
+        "keyword": "Scenario",
+        "line": 131,
+        "name": "Scotland - eligible",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 132,
+            "name": "I live in Scotland and am eligible for the WHD",
+            "result": {
+              "duration": 1354000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 133,
+            "name": "I submit the account details form",
+            "result": {
+              "duration": 103000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 134,
+            "name": "I should see the WHD anchor button",
+            "result": {
+              "duration": 134000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 135,
+            "name": "I should see advice for customers living in Scotland",
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 136,
+            "name": "I should see the Check my eligibility button",
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 137,
+            "name": "I should not see a payment method, Due by date or advice on moving house or postal strikes",
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "card-for-warm-home-discount-details",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Card for Warm Home Discount details",
+    "uri": "cypress/e2e/features/whdCard.feature"
+  }
+]
