@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import "../../components/sidebar/Sidebar.css";
 
 const Home: React.FC = () => {

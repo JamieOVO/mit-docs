@@ -1,6 +1,7 @@
-import { Data } from "../table/Table";
-import "./Sidebar.css";
-import { Link } from "react-router-dom";
+import { Data } from '../table/Table';
+import './Sidebar.css';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Sidebar: React.FC<{ data: Data[] }> = ({ data }) => {
   return (
@@ -12,7 +13,7 @@ const Sidebar: React.FC<{ data: Data[] }> = ({ data }) => {
       <ul className="sidebar-list">
         {data.map((feature, index) => (
           <li>
-            <a href={`#feature-${index}`}>{feature.name}</a>
+            <HashLink to={`#feature-${index}`}>{feature.name}</HashLink>
           </li>
         ))}
       </ul>
