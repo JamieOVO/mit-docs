@@ -3,7 +3,7 @@ import './Sidebar.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-const Sidebar: React.FC<{ data: Data[] }> = ({ data }) => {
+const Sidebar: React.FC<{ data: Data[], path: string }> = ({ data, path }) => {
   return (
     <div className="sidebar">
       <Link to="/" className="back-button">
@@ -13,7 +13,7 @@ const Sidebar: React.FC<{ data: Data[] }> = ({ data }) => {
       <ul className="sidebar-list">
         {data.map((feature, index) => (
           <li>
-            <HashLink to={`#feature-${index}`}>{feature.name}</HashLink>
+            <HashLink to={`${path}/#feature-${index}`}>{feature.name}</HashLink>
           </li>
         ))}
       </ul>
