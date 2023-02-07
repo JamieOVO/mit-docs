@@ -1,7 +1,7 @@
 import { Data } from '../table/Table';
 import './Sidebar.css';
-// import { Link } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Sidebar: React.FC<{ data: Data[] }> = ({ data }) => {
   return (

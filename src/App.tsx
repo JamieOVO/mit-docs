@@ -10,13 +10,13 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/smart-meter-troubleshooting-tool" element={<Smhc />} />
           <Route path="/winter-support-tool" element={<Ebss />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
