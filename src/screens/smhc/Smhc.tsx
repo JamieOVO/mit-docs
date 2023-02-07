@@ -6,7 +6,7 @@ function Smhc() {
   return (
     <>
       <div className="feature-main">
-        <Sidebar data={data} path="smart-meter-troubleshooting-tool" />
+        <Sidebar data={data} />
         <Table data={data} title="Smart troubleshooting tool - Documentation" />
       </div>
     </>

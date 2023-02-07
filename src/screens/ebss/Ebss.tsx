@@ -6,7 +6,7 @@ function Ebss() {
   return (
     <>
       <div className="feature-main">
-        <Sidebar data={data} path="winter-support-tool" />
+        <Sidebar data={data} />
         <Table data={data} title="Winter Support Tool - Documentation" />
       </div>
     </>
