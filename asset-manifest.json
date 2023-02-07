@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mit-docs/static/css/main.d1b5c5d5.css",
-    "main.js": "/mit-docs/static/js/main.8d83f62f.js",
+    "main.js": "/mit-docs/static/js/main.12bb3081.js",
     "static/js/787.d2944c48.chunk.js": "/mit-docs/static/js/787.d2944c48.chunk.js",
     "static/media/background.svg": "/mit-docs/static/media/background.4ef9dd9cd6e09ca54869.svg",
     "index.html": "/mit-docs/index.html",
     "main.d1b5c5d5.css.map": "/mit-docs/static/css/main.d1b5c5d5.css.map",
-    "main.8d83f62f.js.map": "/mit-docs/static/js/main.8d83f62f.js.map",
+    "main.12bb3081.js.map": "/mit-docs/static/js/main.12bb3081.js.map",
     "787.d2944c48.chunk.js.map": "/mit-docs/static/js/787.d2944c48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d1b5c5d5.css",
-    "static/js/main.8d83f62f.js"
+    "static/js/main.12bb3081.js"
   ]
 }
